@@ -29,7 +29,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>REM</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>RESTAUARANTE</b></span>
+          <span class="logo-lg"><b>RESTAURANTE</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -41,12 +41,11 @@
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
-              
-              <!-- User Account: style can be found in dropdown.less -->
+    
+              <!-- SE PUEDE ELIMINAR O MODIFICAR -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
+                 
                   <span class="hidden-xs">Steeven Sanchez</span>
                 </a>
                 <ul class="dropdown-menu">
@@ -58,7 +57,7 @@
                       <small>www.youtube.com/jcarlosad7</small>
                     </p>
                   </li>
-                  
+                  <!-- SOLO HASTA ESTA PARTE ----------- -->
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     
@@ -162,7 +161,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Ventas</h3>
+                  <h3 class="box-title">Sistema de Ventas Restaurante Chino</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
@@ -188,13 +187,6 @@
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      <!--Fin-Contenido-->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
-        </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.incanatoit.com">IncanatoIT</a>.</strong> All rights reserved.
-      </footer>
 
       
     <!-- jQuery 2.1.4 -->

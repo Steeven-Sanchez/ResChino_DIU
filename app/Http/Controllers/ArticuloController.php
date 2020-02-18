@@ -24,7 +24,9 @@ class ArticuloController extends Controller
     		->join('categoria as c', 'a.idcategoria','=','c.idcategoria')
     		->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
     		->where('a.nombre','LIKE','%'.$query.'%')
+            ->where('estado','=','Activo')
             ->orwhere('a.codigo','LIKE','%'.$query.'%')
+            ->where('estado','=','Activo')
     		->orderBy('a.idcategoria','desc')
     		->paginate(7);
     		return view('restaurante.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);

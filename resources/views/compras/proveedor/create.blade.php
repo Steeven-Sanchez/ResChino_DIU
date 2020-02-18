@@ -2,7 +2,7 @@
 @section ('contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nueva Articulo</h3>
+			<h3>Nueva Proveedor</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
 				<ul>
@@ -14,50 +14,50 @@
 			@endif
 		</div>
 	</div>	
-			{!!Form::open(array('url'=>'restaurante/articulo','method'=>'POST','autocomplete'=>'off','files'=> 'true'))!!}
+			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=> 'true'))!!}
             {{Form::token()}}
     <div class="row">
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
             	<label for="nombre">Nombre</label>
-                <input type="text" name="nombre" required value="{{old('nombre')}}" class="form-control" placeholder="Nombre del Articulo...">
+                <input type="text" name="nombre" required value="{{old('nombre')}}" class="form-control" placeholder="Nombre...">
             </div>
     	</div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" value="{{old('direccion')}}" class="form-control" placeholder="Direccion...">
+            </div>
+        </div>
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
-    			<label>Categoria</label>
-    			<select name="idcategoria" class="form-control">
-    				@foreach($categorias as $cat)
-    					<option value="{{$cat->idcategoria}}">{{$cat->nombre}}</option>
-    				@endforeach	
+    			<label>Documento</label>
+    			<select name="tipo_documento" class="form-control">
+    					<option value="CC">CC</option>
+                        <option value="PAS">PAS</option>
     			</select>
     			
     		</div>
     	</div>	
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
-            	<label for="codigo">Codigo</label>
-                <input type="text" name="codigo" required value="{{old('codigo')}}" class="form-control" placeholder="Codigo del Articulo...">
+            	<label for="num_documento">Número Documento</label>
+                <input type="text" name="num_documento" required value="{{old('num_documento')}}" class="form-control" placeholder="Número Documento...">
             </div>
     	</div>	
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
-            	<label for="stock">Stock</label>
-                <input type="text" name="stock" required value="{{old('stock')}}" class="form-control" placeholder="Stock del Articulo...">
+            	<label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" value="{{old('telefono')}}" class="form-control" placeholder="Telefono...">
             </div>
     	</div>
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
-            	<label for="descripcion">Descripción</label>
-                <input type="text" name="descripcion"  value="{{old('descripcion')}}" class="form-control" placeholder="Descripción del Articulo...">
+            	<label for="email">Email</label>
+                <input type="email" name="email"  value="{{old('email')}}" class="form-control" placeholder="Email...">
             </div>
     	</div>
-    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    		<div class="form-group">
-            	<label for="imagen">Imagen</label>
-                <input type="file" name="imagen"class="form-control">
-            </div>
-    	</div>
+    	
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
             	<button class="btn btn-primary" type="submit">Guardar</button>

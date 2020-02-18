@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Categorías <a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Articulos <a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
 		@include('restaurante.articulo.search')
 	</div>
 </div>
@@ -17,8 +17,8 @@
 					<th>Codigo</th>
 					<th>Categoria</th>
 					<th>Stock</th>
+					<th>Descripcion</th>
 					<th>Imagen</th>
-					<th>Estado</th>
 					<th>Opciones</th>
 				</thead>
                @foreach ($articulos as $art)
@@ -28,10 +28,10 @@
 					<td>{{$art->codigo}}</td> 
 					<td>{{$art->categoria}}</td> 
 					<td>{{$art->stock}}</td>
+					<td>{{$art->descripcion}}</td>
 					<td>
 						<img src="{{asset('imagenes/articulos/'.$art->imagen)}}" alt= "{{ $art->nombre }}" height="100px" width="100px" class="img-thumbnail">
 					</td>
-					<td>{{$art->estado}}</td>
 					<td>
 						<a href = "{{URL::action('ArticuloController@edit',$art->idarticulo)}}"> <button class ="btn btn-info">Editar</button></a>
                         <a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
