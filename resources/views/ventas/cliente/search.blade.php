@@ -3,7 +3,7 @@
 	<div class="input-group">
 		<input  type ="text" class="form-control" name="searchText" placeholder="Buscar..."value="{{$searchText}}">
 		<span clase="input-group-btn" >
-			<button type="submit" class="btn btn-primary">Buscar</button>
+			<button type="submit" class="btn btn-primary"><span class="fas fa-search"></span> Buscar</button>
 		</span>
 	</div>
 </div>

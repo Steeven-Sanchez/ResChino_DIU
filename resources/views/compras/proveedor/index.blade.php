@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Proveedores <a href="proveedor/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Proveedores <a href="proveedor/create"><button class="btn btn-success"><span class="far fa-plus-square"></span>  Nuevo</button></a></h3>
 		@include('compras.proveedor.search')
 	</div>
 </div>
@@ -26,12 +26,11 @@
 					<td>{{$per->nombre}}</td> 
 					<td>{{$per->tipo_documento}}</td> 
 					<td>{{$per->num_documento}}</td> 
-					<td>{{$per->direccion}}</td>
 					<td>{{$per->telefono}}</td>
 					<td>{{$per->email}}</td>
 					<td>
-						<a href = "{{URL::action('ProveedorController@edit',$per->idpersona)}}"> <button class ="btn btn-info">Editar</button></a>
-                        <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href = "{{URL::action('ProveedorController@edit',$per->idpersona)}}"> <button class ="btn btn-info"><span class="far fa-edit"></span> Editar</button></a>
+                        <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger"><span class="fas fa-minus-circle"></span> Eliminar</button></a> 
 					</td>
 				</tr>
 				@include('compras.proveedor.modal')

@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Clientes <a href="cliente/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Clientes <a href="cliente/create"><button class="btn btn-success"><span class="far fa-plus-square"></span> Nuevo</button></a></h3>
 		@include('ventas.cliente.search')
 	</div>
 </div>
@@ -30,8 +30,8 @@
 					<td>{{$per->telefono}}</td>
 					<td>{{$per->email}}</td>
 					<td>
-						<a href = "{{URL::action('ClienteController@edit',$per->idpersona)}}"> <button class ="btn btn-info">Editar</button></a>
-                        <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href = "{{URL::action('ClienteController@edit',$per->idpersona)}}"> <button class ="btn btn-info"><span class="far fa-edit"></span> Editar</button></a>
+                        <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger"> <span class="fas fa-minus-circle"></span> Eliminar</button></a>
 					</td>
 				</tr>
 				@include('ventas.cliente.modal')

@@ -28,7 +28,7 @@ class ArticuloController extends Controller
             ->orwhere('a.codigo','LIKE','%'.$query.'%')
             ->where('estado','=','Activo')
     		->orderBy('a.idcategoria','desc')
-    		->paginate(7);
+    		->paginate(6);
     		return view('restaurante.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
     	}
     	

@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Articulos <a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Articulos <a href="articulo/create"><button class="btn btn-success"><span class="far fa-plus-square"></span> Nuevo</button></a></h3>
 		@include('restaurante.articulo.search')
 	</div>
 </div>
@@ -30,11 +30,13 @@
 					<td>{{$art->stock}}</td>
 					<td>{{$art->descripcion}}</td>
 					<td>
+						<div title={{$art->nombre}}>
 						<img src="{{asset('imagenes/articulos/'.$art->imagen)}}" alt= "{{ $art->nombre }}" height="100px" width="100px" class="img-thumbnail">
+						</div>
 					</td>
 					<td>
-						<a href = "{{URL::action('ArticuloController@edit',$art->idarticulo)}}"> <button class ="btn btn-info">Editar</button></a>
-                        <a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href = "{{URL::action('ArticuloController@edit',$art->idarticulo)}}"> <button class ="btn btn-info"><span class="far fa-edit"></span> Editar</button></a>
+                        <a href="" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger"><span class="fas fa-minus-circle"></span> Eliminar</button></a>
 					</td>
 				</tr>
 				@include('restaurante.articulo.modal')

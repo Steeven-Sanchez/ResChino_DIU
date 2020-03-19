@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Categorías <a href="categoria/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Categorías <a href="categoria/create"><button class="btn btn-success"><span class="far fa-plus-square"></span> Nuevo</button></a></h3>
 		@include('restaurante.categoria.search')
 	</div>
 </div>
@@ -23,8 +23,8 @@
 					<td>{{$cat->nombre}}</td> 
 					<td>{{$cat->descripcion}}</td> 
 					<td>
-						<a href = "{{URL::action('CategoriaController@edit',$cat->idcategoria)}}"> <button class ="btn btn-info">Editar</button></a>
-                        <a href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href = "{{URL::action('CategoriaController@edit',$cat->idcategoria)}}"> <button class ="btn btn-info"><span class="far fa-edit"></span> Editar</button></a>
+                        <a href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger"><span class="fas fa-minus-circle"></span> Eliminar</button></a>
 					</td>
 				</tr>
 				@include('restaurante.categoria.modal')

@@ -19,3 +19,4 @@ Route::resource('restaurante/categoria','CategoriaController');
 Route::resource('restaurante/articulo','ArticuloController');
 Route::resource('ventas/cliente','ClienteController');
 Route::resource('compras/proveedor','ProveedorController');
+Route::resource('compras/ingreso','IngresoController');

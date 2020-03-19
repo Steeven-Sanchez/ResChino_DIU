@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>RESTAURANTE EL MECHIN | DIU</title>
+    <title>RESTAURANTE ARROZ PAISA | DIU</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -27,7 +27,7 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>REM</b></span>
+          <span class="logo-mini"><b>REP</b></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>RESTAURANTE</b></span>
         </a>
@@ -46,15 +46,15 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                  
-                  <span class="hidden-xs">Steeven Sanchez</span>
+                  <span class="hidden-xs">DIU</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     
                     <p>
-                      www.incanatoit.com - Desarrollando Software
-                      <small>www.youtube.com/jcarlosad7</small>
+                      TRABAJO FINAL DISEÑO DE INTERFACES DE USURIOS
+                      <small>http://tulua.univalle.edu.co/</small>
                     </p>
                   </li>
                   <!-- SOLO HASTA ESTA PARTE ----------- -->
@@ -85,25 +85,25 @@
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fas fa-utensils"></i>
                 <span>Restaurante</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="restaurante/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="restaurante/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="{{url('restaurante/articulo')}}"><i class="fas fa-archive"></i> Artículos</a></li>
+                <li><a href="{{url('restaurante/categoria')}}"><i class="fab fa-buffer"></i> Categorías</a></li>
               </ul>
             </li>
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fas fa-shopping-bag"></i>
                 <span>Compras</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="compras/ingreso"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li><a href="compras/proveedor"><i class="fa fa-circle-o"></i> Proveedores</a></li>
+                <li><a href="{{url('compras/ingreso')}}"><i class="fas fa-money-check-alt"></i> Ingresos</a></li>
+                <li><a href="{{url('compras/proveedor')}}"><i class="fas fa-people-carry"></i> Proveedores</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -113,8 +113,8 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="ventas/venta"><i class="fa fa-circle-o"></i> Ventas</a></li>
-                <li><a href="ventas/cliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                <li><a href="{{url('ventas/venta')}}"><i class="fa fa-shopping-cart"></i> Ventas</a></li>
+                <li><a href="{{url('ventas/cliente')}}"><i class="fas fa-users"></i> Clientes</a></li>
               </ul>
             </li>
                        
@@ -124,24 +124,17 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                <li><a href="configuracion/usuario"><i class="fas fa-user"></i> Usuarios</a></li>
                 
-              </ul>
-            </li>
-             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
-              </a>
-            </li>
-                        
           </ul>
+              </li>
+               <li>
+                <a href="#">
+                  <i class="far fa-question-circle"></i> <span>Ayuda</span>
+                  <small class="label pull-right bg-red">PDF</small>
+                </a>
+              </li>              
+            </ul>
         </section>
         <!-- /.sidebar -->
       </aside>
@@ -161,9 +154,9 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Ventas Restaurante Chino</h3>
+                  <h3 class="box-title">Sistema de Ventas Arroz Paisa</h3>
                   <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="colliapse"><i class="fa fa-minus"></i></button>
                     
                     <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                   </div>
@@ -195,6 +188,8 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
     
   </body>
 </html>

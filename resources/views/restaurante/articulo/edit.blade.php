@@ -63,14 +63,15 @@
             	<label for="imagen">Imagen</label>
                 <input type="file" name="imagen"class="form-control">
                 @if (($articulo->imagen)!="")
+
                 	<img src="{{asset('imagenes/articulos/'.$articulo->imagen)}}"  height="100px" width="100px" >
                 @endif
             </div>
     	</div>
     	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     		<div class="form-group">
-            	<button class="btn btn-primary" type="submit">Guardar</button>
-            	<button class="btn btn-danger" type="reset">Cancelar</button>
+            	<button class="btn btn-primary" type="submit"><span class="fas fa-save"></span> Guardar</button>
+            	<button class="btn btn-danger" type="reset"><span class="fas fa-minus-circle"></span> Cancelar</button>
             </div>
     	</div>
     						
